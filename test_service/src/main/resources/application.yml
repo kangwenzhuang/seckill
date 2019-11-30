@@ -1,0 +1,25 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: test-service
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8100/eureka/
+  instance:
+    hostname: 172.17.174.232
+
+
+
+
+logging:
+  level:
+    com.kang.error: debug
